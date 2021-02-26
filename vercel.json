@@ -1,0 +1,58 @@
+{
+  "github": {
+    "autoAlias": true,
+    "enabled": true,
+    "silent": false
+  },
+  "functions": {
+    "api/index.ts": {
+      "includeFiles": "../public/**",
+      "maxDuration": 10,
+      "memory": 3008
+    }
+  },
+  "public": true,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/docs/project-config",
+      "destination": "https://vercel.com/docs/configuration#project",
+      "permanent": true
+    },
+    {
+      "source": "/repo",
+      "destination": "https://github.com/flex-development/adt-api",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/api"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/api/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Credentials",
+          "value": "true"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "s-maxage=1, stale-while-revalidate"
+        }
+      ]
+    }
+  ]
+}

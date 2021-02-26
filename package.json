@@ -1,0 +1,83 @@
+{
+  "name": "@flex-development/adt-api",
+  "description": "Generate JSON Web Tokens for use with the Apple Music API.",
+  "keywords": [],
+  "homepage": "https://github.com/flex-development/adt-api",
+  "repository": "git://github.com/flex-development/adt-api.git",
+  "bugs": {
+    "url": "https://github.com/flex-development/adt-api/issues",
+    "email": "developers@flexdevelopment.llc"
+  },
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "Lexus Drumgold",
+    "email": "lex@flexdevlopment.llc",
+    "url": "https://flexdevelopment.llc"
+  },
+  "scripts": {
+    "vercel:rm": "rm -rf .vercel && mkdir .vercel",
+    "vercel:link": "cp ~/.vercel/adt-api.json .vercel/project.json;",
+    "clean": "rm -rf node_modules; yarn",
+    "format": "prettier --write \"./\"",
+    "lint": "eslint . --ext js,ts --fix --cache",
+    "predev": "vc env pull .env --yes",
+    "dev": "vc dev -l $PORT",
+    "test": "jest --detectOpenHandles --passWithNoTests",
+    "test:quiet": "yarn test || true"
+  },
+  "dependencies": {
+    "@feathersjs/errors": "pre",
+    "@flex-development/json": "1.0.5",
+    "@types/feathersjs__errors": "latest",
+    "@types/jsonwebtoken": "latest",
+    "@types/lodash": "latest",
+    "@types/nanoid": "latest",
+    "@types/pino": "latest",
+    "axios": "latest",
+    "ga-measurement-protocol": "latest",
+    "jsonwebtoken": "latest",
+    "lodash": "latest",
+    "nanoid": "latest",
+    "pino": "latest",
+    "pino-pretty": "latest",
+    "tslib": "latest"
+  },
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/eslint-parser": "latest",
+    "@commitlint/cli": "next",
+    "@commitlint/config-conventional": "next",
+    "@commitlint/format": "next",
+    "@types/jest": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "@vercel/node": "latest",
+    "dotenv-cli": "latest",
+    "eslint": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-plugin-import": "latest",
+    "eslint-plugin-jest": "latest",
+    "eslint-plugin-node": "latest",
+    "eslint-plugin-prettier": "latest",
+    "eslint-plugin-tree-shaking": "latest",
+    "execa": "latest",
+    "husky": "4.3.8",
+    "jest": "next",
+    "lint-staged": "latest",
+    "npm": "latest",
+    "prettier": "latest",
+    "ts-jest": "next",
+    "typescript": "4.2.0-beta",
+    "yarn": "latest"
+  },
+  "required-env": [
+    "GA_TRACKING_ID",
+    "NODE_ENV",
+    "NPM_RC",
+    "PORT",
+    "VERCEL_ENV",
+    "VERCEL_GIT_COMMIT_REF",
+    "VERCEL_GIT_COMMIT_SHA",
+    "VERCEL_URL"
+  ]
+}
