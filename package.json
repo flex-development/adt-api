@@ -49,6 +49,7 @@
     "@commitlint/config-conventional": "next",
     "@commitlint/format": "next",
     "@types/jest": "latest",
+    "@types/urijs": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
     "@vercel/node": "latest",
@@ -67,6 +68,7 @@
     "npm": "latest",
     "prettier": "latest",
     "ts-jest": "next",
+    "urijs": "latest",
     "typescript": "4.2.0-beta",
     "yarn": "latest"
   },
