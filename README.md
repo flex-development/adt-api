@@ -16,7 +16,7 @@ Generate JSON Web Tokens for use with the Apple Music API
 ## Getting Started
 
 The Apple Developer Token (ADT) API is a serverless REST API that can be used to
-generate developer tokens suitable for use with the Apple Music API.
+generate JSON Web Tokens (JWTs) suitable for use with the Apple Music API.
 
 For more information, see [Getting Keys and Creating Tokens][1] from the Apple
 Developer docs.
@@ -81,7 +81,7 @@ Retrieve the ADT API documentation as a JSON object. Documentation follows
   "openapi": "3.0.0",
   "info": {
     "title": "Apple Developer Token API",
-    "description": "The Apple Developer Token (ADT) API is a single serverless endpoint that can be used to generate developer tokens suitable for use with the Apple Music API.",
+    "description": "Generate JSON Web Tokens for use with the Apple Music API.",
     "termsOfService": "",
     "contact": {
       "name": "GitHub",

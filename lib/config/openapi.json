@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Apple Developer Token API",
-    "description": "The Apple Developer Token (ADT) API is a single serverless endpoint that can be used to generate developer tokens suitable for use with the Apple Music API.",
+    "description": "Generate JSON Web Tokens for use with the Apple Music API.",
     "termsOfService": "",
     "contact": {
       "name": "GitHub",
