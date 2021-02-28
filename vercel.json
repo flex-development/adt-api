@@ -5,8 +5,7 @@
     "silent": false
   },
   "functions": {
-    "api/index.ts": {
-      "includeFiles": "../public/**",
+    "api/*.ts": {
       "maxDuration": 10,
       "memory": 3008
     }
@@ -47,10 +46,6 @@
         {
           "key": "Access-Control-Allow-Origin",
           "value": "*"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "s-maxage=1, stale-while-revalidate"
         }
       ]
     }

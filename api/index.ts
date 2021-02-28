@@ -1,5 +1,5 @@
 import type { VercelResponse as Res } from '@vercel/node'
-import { ga } from '../lib/config'
+import { docs, ga } from '../lib/config'
 import { handleAPIError, initRoute, trackAPIRequest } from '../lib/middleware'
 import type { APIRequest as Req } from '../lib/types'
 
@@ -9,7 +9,8 @@ import type { APIRequest as Req } from '../lib/types'
  */
 
 /**
- * Root of the Apple Developer Token API.
+ * Returns the API documentation as a JSON object.
+ * Documentation follows OpenAPI Specification v3.0.0 standards.
  *
  * @param req - Incoming request object
  * @param res - Server response object
@@ -22,8 +23,8 @@ export default async (req: Req, res: Res): Promise<Res | void> => {
     // Send `pageview` hit to Google Analytics
     await trackAPIRequest(req)
 
-    // Return welcome response
-    res.json('Apple Developer Token API')
+    // Return documentation JSON
+    res.json(docs)
   } catch (err) {
     return handleAPIError(req, res, err)
   }

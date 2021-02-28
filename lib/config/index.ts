@@ -7,6 +7,7 @@ export { default as axios } from './axios'
 export * from './constants'
 export { default as ga } from './google-analytics'
 export { default as createLogger } from './logger'
+export { default as docs } from './openapi.json'
 export { default as vercel } from './vercel-env'
 
 /* eslint-disable prettier/prettier */
